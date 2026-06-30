@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Geometry Dash Mini</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-overlay">
+            <div id="score-display">0%</div>
+            <div id="attempt-display">Attempt 1</div>
+        </div>
+        <div id="start-screen">
+            <h1>GEOMETRY DASH</h1>
+            <p>Нажми чтобы начать</p>
+        </div>
+        <div id="death-screen" style="display:none;">
+            <h2>ПОПЫТКА НЕ УДАЛАСЬ</h2>
+            <p id="death-percent">0%</p>
+            <button id="restart-btn">ПРОБОВАТЬ СНОВА</button>
+            <button id="menu-btn">В МЕНЮ</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
