@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a1a;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    font-family: 'Arial', sans-serif;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameCanvas {
+    background: linear-gradient(180deg, #0a0a2e 0%, #1a0a3e 100%);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#score-display,
+#attempt-display {
+    color: white;
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-weight: bold;
+}
+
+#start-screen,
+#death-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.85);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #FF00FF;
+    box-shadow: 0 0 30px rgba(255,0,255,0.5);
+    z-index: 20;
+}
+
+#start-screen h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #00FFFF, #FF00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#start-screen p {
+    font-size: 18px;
+    color: #aaa;
+    animation: pulse 1.5s infinite;
+}
+
+#death-screen h2 {
+    font-size: 28px;
+    color: #FF4444;
+    margin-bottom: 10px;
+}
+
+#death-percent {
+    font-size: 48px;
+    color: white;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+button {
+    background: linear-gradient(135deg, #FF00FF, #00FFFF);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
